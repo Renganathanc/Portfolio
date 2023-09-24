@@ -163,6 +163,7 @@ body{
     color: var(--main-txt-color);
 }
 .home-section .hero{
+    margin-top:20px;
     height: 100%;
     width: auto;
     flex-direction: column;
