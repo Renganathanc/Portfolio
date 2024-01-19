@@ -1,4 +1,4 @@
-// menu show and hide toggle 
+
 const menuIcon = document.getElementById("menu-icon");
 const headerNav = document.getElementById("header-nav-list");
 const headerNavItems = document.querySelectorAll('.header-nav-list li')
@@ -20,7 +20,7 @@ menuIcon.addEventListener("click", () => {
     }
 })
 
-// show scroll icon 
+
 const scrollTopIcon = document.getElementById('scroll-top-icon');
 
 const scrollUp = () => {
@@ -29,7 +29,7 @@ const scrollUp = () => {
 }
 
 window.addEventListener('scroll',scrollUp)
-// scroll to top 
+
 scrollTopIcon.addEventListener("click", () => {
     const scrollToTop = () => {
         if(window.pageYOffset > 0) {
@@ -40,10 +40,9 @@ scrollTopIcon.addEventListener("click", () => {
     scrollToTop();
 })
 
-//scroll reveal animation 
-// scroller reveal 
+
 animateElement = (element,origin,delay,distance) => {
-    // Initialize ScrollReveal with options
+    
     const sr = ScrollReveal({
         delay: delay,
         distance: distance,
@@ -51,30 +50,25 @@ animateElement = (element,origin,delay,distance) => {
         easing: 'ease',
         origin: origin
     });
-  
-    // Reveal the element
     sr.reveal(element);
 }
 
-// section header 
 animateElement('.section-header','left',500,'250px');
-// hero section 
+
 animateElement('.hero-img','top',500,'250px');
 animateElement('.hero-content','bottom',500,'100px');
 animateElement('.social-icon-list','right',700,'250px');
-// project section 
+
 animateElement('.project-1','left',700,'250px');
 animateElement('.project-2','right',900,'250px');
-// about section 
+
 animateElement('.about-img','left',700,'250px');
 animateElement('.about-info','right',900,'250px');
-// contact section 
+
 animateElement('.contact-form','right',700,'250px');
 
-// footer section 
 animateElement('.footer-section','bottom',500,'250px');
 
-// light and dark mode toggle 
 const modeChangeIcon = document.getElementById("mode-change-icon");
 
 modeChangeIcon.addEventListener("click", () => {
@@ -82,12 +76,11 @@ modeChangeIcon.addEventListener("click", () => {
         modeChangeIcon.classList.remove("bx-moon");
         modeChangeIcon.classList.add("bx-sun");
         
-        // toggle light and dark mode 
         document.body.classList.toggle('dark-theme');
     }else{
         modeChangeIcon.classList.remove("bx-sun");
         modeChangeIcon.classList.add("bx-moon");
-        // toggle light and dark mode 
+        
         document.body.classList.toggle('dark-theme');
     }
 })
