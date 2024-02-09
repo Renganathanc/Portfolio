@@ -124,7 +124,7 @@ body{
     top: 80px;
     background-color: rgba(255,255,255,0.8);
     border-radius: 1rem;
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     z-index: 99;
     overflow: hidden;
     transition: all .5s cubic-bezier(0.55, 0.085, 0.68 , 0.53) 0.1s;
@@ -163,23 +163,29 @@ body{
     color: var(--main-txt-color);
 }
 .home-section .hero{
-    margin-top:20px;
     height: 100%;
     width: auto;
     flex-direction: column;
 }
 .hero .hero-img{
+    margin-top: 40px;
     height: 50%;
     width: auto;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
+}
+.project-img{animation: bounce 2s infinite ;}
+@keyframes bounce {
+    0% {transform : translateY(0);}
+    40% {transform : translateY(-20px);}
+    60% {transform : translateY(-20px);}
 }
 
 .hero-img img{
-    width: 300px;
-    height: 280px;
+    width: 280px;
+    height: 270px;
     z-index: 2;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .hero-img-bg{
@@ -190,6 +196,11 @@ body{
     background-color: #98bbf4;
     border-radius: 50%;
     box-shadow: var(--hero-img-shadow);
+}
+.hero-img{animation: slideIn 2s infinite ;}
+@keyframes slideIn {
+    0% {transform : translateX(-10%);}
+    40% {transform : translateX(0);}
 }
 
 .hero-content{
@@ -207,8 +218,14 @@ body{
     font-size: var(--fs-large);
 }
 .hero-content span{
-    color: var(--primary-color);
+    color: var(--secondary-txt-color);
 }
+.about-img{animation: fadeIn 2s infinite ;}
+@keyframes fadeIn {
+    50% {opacity:5;}
+    100% {opacity:0;}
+}
+
 
 .social-icon-list,
 .footer-nav{
@@ -279,7 +296,7 @@ body{
 
 .about-img img{
     width: 80%;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 .about-content .about-info{
